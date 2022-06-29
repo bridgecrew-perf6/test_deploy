@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: saththirfinal
+  name: saththirfinal
+  namespace: saththirns
+spec:
+  ports:
+  - name: 1234-80
+    port: 1234
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: saththir-cisco-app
+  type: ClusterIP
+status:
+  loadBalancer: {}
